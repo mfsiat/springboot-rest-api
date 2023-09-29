@@ -58,6 +58,7 @@ public class StudentController {
     // Spring boot REST API that handles HTTP POST Request
     // @PostMapping and @RequestBody
     @PostMapping("students/create")
+    @ResponseStatus(HttpStatus.CREATED)
     public Student createStudent(@org.jetbrains.annotations.NotNull @RequestBody Student student) {
         System.out.println(student.getId());
         System.out.println(student.getFirstName());
@@ -76,7 +77,8 @@ public class StudentController {
             return ResponseEntity.ok(student);
         } catch (Exception e) {
             // Log the exception for debugging purposes
-            e.printStackTrace();
+//            e.printStackTrace();
+//            e.getMessage();
 
             // Return a response with an error message
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid input. Please check your request.");
