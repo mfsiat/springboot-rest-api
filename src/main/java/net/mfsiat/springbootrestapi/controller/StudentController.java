@@ -58,7 +58,7 @@ public class StudentController {
     // Spring boot REST API that handles HTTP POST Request
     // @PostMapping and @RequestBody
     @PostMapping("students/create")
-    public Student createStudent(@RequestBody Student student) {
+    public Student createStudent(@org.jetbrains.annotations.NotNull @RequestBody Student student) {
         System.out.println(student.getId());
         System.out.println(student.getFirstName());
         System.out.println(student.getLastName());
