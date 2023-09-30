@@ -86,4 +86,12 @@ public class StudentController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid input. Please check your request.");
         }
     }
+
+    // Spring Boot REST API that handles HTTP PUT Request - updating existing resource
+    @PutMapping("students/{id}/update")
+    public Student updateStudent(@RequestBody Student student, @PathVariable("id") int studentId){
+        System.out.println(student.getFirstName());
+        System.out.println(student.getLastName());
+        return student;
+    }
 }
