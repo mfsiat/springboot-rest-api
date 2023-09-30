@@ -65,6 +65,8 @@ public class StudentController {
         System.out.println(student.getLastName());
         return student;
     }
+
+    // Below code block is redundant
     @PostMapping("students/create-student-test")
     public ResponseEntity<?> createStudentTest(@RequestBody Student student) {
         try {
