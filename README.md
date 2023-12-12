@@ -3,8 +3,8 @@
 1. Docker & docker compose
 
 run below command to run this project 
-````
+```
 docker compose up -d
-----
+```
+Deplyoment done!
 
-Deployemnet done!
